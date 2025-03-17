@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "title": "Set Apple Charger Cable | 20W Power Adapter (USB-C)",
+    "image": "/1/4/usb_c_20w_power_adapter_a2305.JPG",
+    "images": [
+      "/1/iphone_charger_cable_14_promax_tp240.JPG",
+      "/1/4/usb_c_20w_power_adapter_a2305gl1.JPG"
+    ],
+    "color": "ស",
+    "date": "2025-03-15",
+    "price": 35.99,
+    "details": [
+      "អាចសាកបាន៖ 11-14 Promax",
+      "ការធានា៖ ១ ឆ្នាំ",
+      "កូដខ្សែរសាក៖ TP២៤០",
+      "មាននិម្មិតសញ្ញា៖ ក្រុមហ៊ុន វ៉ាខន"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Headphone Jack Adapter (USB-C)",
+    "image": "/2/usb_c_to_headphone_jack_adapter_a_2155_gl1.JPG",
+    "images": [
+      "/2/usb_c_to_headphone_jack_adapter_a_2155_gl1.jpg",
+      "/2/usb_c_to_headphone_jack_adapter_a_2155_gl2.jpg",
+      "/2/usb_c_to_headphone_jack_adapter_a_2155_gl3.JPG",
+      "/2/usb_c_to_headphone_jack_adapter_a_2155.jpg"
+    ],
+    "color": "ស",
+    "date": "2025-03-15",
+    "price": 15.99,
+    "details": ["ខ្សែរតំណ៖ ភ្ជាប់ជាមួយកាស់ហ្សីន", "ការធានា៖ ៦ ខែ", "កូដ៖ A២១៥៥"]
+  },
+  {
+    "id": 3,
+    "title": "Set OPPO | 65W Super VOOC Power Adapter Kit (USB-C)",
+    "image": "/3/super_vooc_65w.JPG",
+    "images": [
+      "/3/super_vooc_65w.JPG",
+      "/3/super_vooc_65wg_gl2.JPG",
+      "/3/super_vooc_65w_gl3.JPG"
+    ],
+    "color": "ស",
+    "date": "2025-02-16",
+    "price": 7.99,
+    "details": ["ការធានាមួយសប្តាហ៍"]
+  },
+  {
+    "id": 4,
+    "title": "DuyEar (❌Not USB-C)",
+    "image": "/6/duyear_ip7.JPG",
+    "images": [
+      "/6/duyear_ip7.JPG",
+      "/6/duyear_ip7_gl1.JPG",
+      "/6/duyear_ip7_gl2.JPG"
+    ],
+    "color": "ស",
+    "date": "2025-02-15",
+    "price": 15.99,
+    "details": ["ខ្សែរតំណ៖ ភ្ជាប់ជាមួយកាស់ហ្សីន", "ការធានា៖ ៦ ខែ", "កូដ៖ IP៧"]
+  },
+  {
+    "id": 5,
+    "title": "CARAKOCI USB to SA Adapter",
+    "image": "/5/carkoci_android_charger_cable.JPG",
+    "images": [
+      "/5/carkoci_android_charger_cable.JPG",
+      "/5/carkoci_android_charger_cable_gl1.JPG",
+      "/5/carkoci_android_charger_cable_gl2.JPG",
+      "/5/carkoci_android_charger_cable_gl3.JPG"
+    ],
+    "color": "ស",
+    "date": "2025-03-15",
+    "price": 5.99,
+    "details": ["ការធានាមួយសប្តាហ៍"]
+  },
+  {
+    "id": 5,
+    "title": "2 Meters | CARAKOCI USB to SA Adapter",
+    "image": "/5/carkoci_android_charger_cable_gl3.JPG",
+    "images": [
+      "/5/carkoci_android_charger_cable_gl3.JPG",
+      "/5/carkoci_android_charger_cable_gl1.JPG",
+      "/5/carkoci_android_charger_cable_gl2.JPG",
+      "/5/carkoci_android_charger_cable.JPG"
+    ],
+    "color": "ស",
+    "date": "2025-03-15",
+    "price": 6.99,
+    "details": ["ប្រវែង៖ ២ម៉ែត្រ", "ការធានាមួយសប្តាហ៍"]
+  }
+]

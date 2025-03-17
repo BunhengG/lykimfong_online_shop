@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

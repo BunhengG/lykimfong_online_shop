@@ -1,0 +1,182 @@
+"use client";
+
+import React from "react";
+
+import { useEffect, useState } from "react";
+import { Product } from "@/models/product_model";
+import productData from "@/data/product_data.json";
+import Link from "next/link";
+import Image from "next/image";
+import { motion } from "framer-motion";
+
+const HomePage = () => {
+  const [newProducts, setNewProducts] = useState<Product[]>([]);
+
+  useEffect(() => {
+    const filteredProducts = productData
+      .sort(
+        (a: Product, b: Product) =>
+          new Date(b.date).getTime() - new Date(a.date).getTime()
+      )
+      .slice(0, 3);
+
+    setNewProducts(filteredProducts);
+  }, []);
+
+  return (
+    <div className="bg-gray-100">
+      {/* Hero Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="relative bg-cover bg-center h-screen"
+        style={{ backgroundImage: `url("./cover.webp")` }}
+      >
+        <div className="absolute inset-0 bg-black opacity-60"></div>
+        <div className="container mx-auto h-full flex justify-center items-center text-center text-white relative z-10">
+          <div>
+            <h1 className="text-white text-3xl md:text-6xl lg:font-bold font-medium lg:leading-tight mb-4">
+              សូមស្វាគមន៍មកកាន់ហាងលីគីមហ្វុង
+            </h1>
+            <p className="text-white text-base md:text-2xl mb-6 px-6">
+              ស្វែងរកផលិតផលល្អបំផុតលើគេហទំព័រពួកយើងដែលអ្នកពេញចិត្ត
+            </p>
+            <Link
+              href="/productList"
+              className=" bg-white text-rose-500 py-2 px-6 rounded-full text-lg hover:bg-rose-600 hover:text-white transition duration-300"
+            >
+              ចូលមើលទំនិញ
+            </Link>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Product Showcase Section */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="py-16 bg-white"
+      >
+        <div className="container mx-auto text-center">
+          <h2 className="lg:text-3xl text-2xl lg:font-semibold font-semibold text-gray-600 lg:mb-8">
+            ផលិតផលថ្មី
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 p-4">
+            {newProducts.map((product, index) => (
+              <motion.div
+                key={product.id}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.2, delay: index * 0.1 }}
+                whileHover={{ scale: 1.02 }}
+                className="bg-white rounded-3xl shadow-lg hover:shadow-xl transition duration-300 relative border border-gray-200"
+              >
+                <Image
+                  width={350}
+                  height={330}
+                  src={product.image}
+                  alt={product.title}
+                  className="w-full h-72 object-cover rounded-t-3xl"
+                />
+                <div className="p-8">
+                  <h3
+                    className="text-rose-500 text-xl font-semibold mb-2 truncate w-full"
+                    style={{ fontFamily: "Inter" }}
+                  >
+                    {product.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4">{product.details[0]}</p>
+                  <Link
+                    href="/productList"
+                    className="bg-gray-500 text-white hover:bg-rose-500 py-2 px-4 rounded-4xl"
+                  >
+                    ចូលមើលបន្ថែម
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.section>
+
+      {/* About Us Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="py-8 bg-gray-200"
+      >
+        <div className="container mx-auto text-center">
+          <h2 className="lg:text-3xl text-2xl font-semibold text-rose-600 mb-4">
+            អំពីហាងយើងខ្ញុំ
+          </h2>
+          <div className="flex justify-center">
+            <Image
+              width={250}
+              height={230}
+              src="/logo_white_board.jpg"
+              alt="About Us"
+              className="w-40 h-40 object-cover rounded-lg mb-4 hover:shadow-2xl"
+            />
+          </div>
+          <p className="text-base md:text-xl text-gray-500 lg:px-12 px-4 py-4 lg:leading-8 mb-2">
+            នៅហាង Siren Shop,
+            យើងផ្តល់ជូននូវផលិតផលជាច្រើនប្រភេទដែលមានគុណភាពខ្ពស់ក្នុងតម្លៃសមរម្យ
+            និងអាចជឿទុកចិត្តបាន។ ដើម្បីធ្វើឱ្យអតិថិជនកាន់តែមានភាពងាយស្រួល
+            និងទំនើប ពួកយើងបានបង្កើតនៅគេហទំព័រមួយនេះឡើង
+            ដើម្បីអោយអតិថិជនអាចជ្រើសរើសផលិតផលបានដោយមានភាពងាយស្រួល និងរហ័ស។
+          </p>
+          <p className="text-sm md:text-base text-gray-500 px-4">
+            យើងពេញចិត្តក្នុងការផ្តល់ជូនអតិថិជនរបស់យើងនូវផលិតផលមានគុណភាពល្អ
+            និងទទួលមតិផ្សេងៗពីអតិថិជន។
+          </p>
+        </div>
+      </motion.section>
+
+      {/* Call to Action Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="py-12 bg-gray-200 text-center"
+      >
+        <h2 className="text-xl text-gray-500 font-semibold mb-6">
+          ទំនាក់ទំនងផ្សេងៗ
+        </h2>
+        <div className="flex justify-center gap-4 items-center">
+          <Link href="#">
+            <Image
+              width={250}
+              height={230}
+              src="/fb.png"
+              alt="Facebook Contact"
+              className="w-10 h-10 object-cover"
+            />
+          </Link>
+          <Link href="#">
+            <Image
+              width={250}
+              height={230}
+              src="/telegram.png"
+              alt="Telegram Contact"
+              className="w-10 h-10 object-cover"
+            />
+          </Link>
+          <Link href="#">
+            <Image
+              width={250}
+              height={230}
+              src="/messenger.png"
+              alt="Telegram Contact"
+              className="w-10 h-10 object-cover"
+            />
+          </Link>
+        </div>
+      </motion.section>
+    </div>
+  );
+};
+
+export default HomePage;
