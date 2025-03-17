@@ -24,7 +24,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className="bg-gray-100">
+    <div className="bg-black">
       {/* Hero Section */}
       <motion.section
         initial={{ opacity: 0, y: 0 }}
@@ -40,11 +40,11 @@ const HomePage = () => {
               សូមស្វាគមន៍មកកាន់ហាងលីគីមហ្វុង
             </h1>
             <p className="text-white text-base md:text-2xl mb-6 px-6">
-              ស្វែងរកផលិតផលល្អបំផុតលើគេហទំព័រពួកយើងដែលអ្នកពេញចិត្ត
+              ស្វែងរកផលិតផលលើគេហទំព័រយើងដែលអ្នកពេញចិត្ត
             </p>
             <Link
               href="/productList"
-              className=" bg-white text-rose-500 py-2 px-6 rounded-full text-lg hover:bg-rose-600 hover:text-white transition duration-300"
+              className=" bg-rose-500/20 text-white hover:text-white border border-rose-600 hover:bg-rose-500 py-2 px-8 rounded-4xl"
             >
               ចូលមើលទំនិញ
             </Link>
@@ -57,10 +57,10 @@ const HomePage = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="py-16 bg-white"
+        className="py-16 bg-black"
       >
         <div className="container mx-auto text-center">
-          <h2 className="lg:text-3xl text-2xl lg:font-semibold font-semibold text-gray-600 lg:mb-8">
+          <h2 className="lg:text-3xl text-2xl lg:font-semibold font-semibold text-white lg:mb-8">
             ផលិតផលថ្មី
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 p-4">
@@ -71,7 +71,7 @@ const HomePage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.2, delay: index * 0.1 }}
                 whileHover={{ scale: 1.02 }}
-                className="bg-white rounded-3xl shadow-lg hover:shadow-xl transition duration-300 relative border border-gray-200"
+                className="bg-gray-900 rounded-3xl shadow-lg hover:shadow-xl transition duration-300 relative border border-gray-500"
               >
                 <Image
                   width={350}
@@ -80,17 +80,17 @@ const HomePage = () => {
                   alt={product.title}
                   className="w-full h-72 object-cover rounded-t-3xl"
                 />
-                <div className="p-8">
+                <div className="p-12">
                   <h3
-                    className="text-rose-500 text-xl font-semibold mb-2 truncate w-full"
+                    className="text-white text-xl font-semibold mb-2 truncate w-full"
                     style={{ fontFamily: "Inter" }}
                   >
                     {product.title}
                   </h3>
-                  <p className="text-gray-600 mb-4">{product.details[0]}</p>
+                  <p className="text-gray-400 mb-8">{product.details[0]}</p>
                   <Link
                     href="/productList"
-                    className="bg-gray-500 text-white hover:bg-rose-500 py-2 px-4 rounded-4xl"
+                    className="bg-rose-500/20 text-rose-500 hover:text-white border border-rose-600 hover:bg-rose-500 py-2 px-4 rounded-4xl"
                   >
                     ចូលមើលបន្ថែម
                   </Link>
@@ -106,29 +106,29 @@ const HomePage = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="py-8 bg-gray-200"
+        className="py-8 bg-gray-950"
       >
         <div className="container mx-auto text-center">
-          <h2 className="lg:text-3xl text-2xl font-semibold text-rose-600 mb-4">
+          <h2 className="lg:text-3xl text-2xl font-semibold text-white mb-4">
             អំពីហាងយើងខ្ញុំ
           </h2>
           <div className="flex justify-center">
             <Image
               width={250}
               height={230}
-              src="/logo_white_board.jpg"
+              src="/lykimfong_logo.jpg"
               alt="About Us"
               className="w-40 h-40 object-cover rounded-lg mb-4 hover:shadow-2xl"
             />
           </div>
-          <p className="text-base md:text-xl text-gray-500 lg:px-12 px-4 py-4 lg:leading-8 mb-2">
-            នៅហាង Siren Shop,
+          <p className="text-base md:text-xl text-gray-400 lg:px-12 px-4 py-4 lg:leading-8 mb-2">
+            នៅហាង លី គីមហ្វុង
             យើងផ្តល់ជូននូវផលិតផលជាច្រើនប្រភេទដែលមានគុណភាពខ្ពស់ក្នុងតម្លៃសមរម្យ
             និងអាចជឿទុកចិត្តបាន។ ដើម្បីធ្វើឱ្យអតិថិជនកាន់តែមានភាពងាយស្រួល
             និងទំនើប ពួកយើងបានបង្កើតនៅគេហទំព័រមួយនេះឡើង
             ដើម្បីអោយអតិថិជនអាចជ្រើសរើសផលិតផលបានដោយមានភាពងាយស្រួល និងរហ័ស។
           </p>
-          <p className="text-sm md:text-base text-gray-500 px-4">
+          <p className="text-sm md:text-base text-gray-400 px-4">
             យើងពេញចិត្តក្នុងការផ្តល់ជូនអតិថិជនរបស់យើងនូវផលិតផលមានគុណភាពល្អ
             និងទទួលមតិផ្សេងៗពីអតិថិជន។
           </p>
@@ -140,9 +140,9 @@ const HomePage = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="py-12 bg-gray-200 text-center"
+        className="py-12 bg-gray-950 text-center"
       >
-        <h2 className="text-xl text-gray-500 font-semibold mb-6">
+        <h2 className="text-xl text-gray-300 font-semibold mb-6">
           ទំនាក់ទំនងផ្សេងៗ
         </h2>
         <div className="flex justify-center gap-4 items-center">

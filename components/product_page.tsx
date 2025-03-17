@@ -39,16 +39,17 @@ const ProductPage = () => {
   };
 
   return (
-    <div className="container mx-auto p-6">
+    <div className="container mx-auto p-6 mt-16">
+      <h2 className="text-2xl font-semibold text-white my-6">| បញ្ជីទាំងអស់</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
         {products.map((product, index) => (
           <motion.div
             key={product.id}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            whileHover={{ scale: 1.05 }}
-            className="rounded-3xl shadow-md bg-white cursor-pointer relative"
+            transition={{ duration: 0.3, delay: index * 0.05 }}
+            whileHover={{ scale: 1.02 }}
+            className="bg-gray-900 rounded-3xl shadow-lg hover:shadow-xl transition duration-300 relative border border-gray-500 cursor-pointer"
           >
             {/* Favorite Button */}
             <button
@@ -56,13 +57,12 @@ const ProductPage = () => {
                 e.stopPropagation();
                 handleFavoriteClick(product.id.toString());
               }}
-              className="p-3 absolute top-0 right-0 text-2xl bg-white/40 rounded-tr-3xl rounded-bl-4xl"
+              className="p-3 absolute top-0 right-0 text-2xl bg-white/20 hover:bg-white/50 rounded-tr-3xl rounded-bl-4xl"
             >
-              {/* {favorites.includes(product.id.toString()) ? "❤️" : "🤍"} */}
               {favorites.includes(product.id.toString()) ? (
-                <FaHeart className="text-red-500" />
+                <FaHeart className="text-rose-600 cursor-pointer" />
               ) : (
-                <FiHeart className="text-white" />
+                <FiHeart className="text-white cursor-pointer" />
               )}
             </button>
 
@@ -76,16 +76,21 @@ const ProductPage = () => {
             />
             <div className="p-4">
               <h3
-                className="lg:text-xl text-base text-gray-500 font-semibold lg:my-4 my-4"
+                className="lg:text-xl text-lg text-gray-500 font-semibold lg:my-4 my-4"
                 style={{ fontFamily: "Inter" }}
               >
                 {product.title}
               </h3>
-              <p className="text-gray-500 text-lg">ពណ៌៖ {product.color}</p>
+              <div className="flex gap-2">
+                <p className="text-gray-400 text-lg">ពណ៌៖ </p>
+                <p className="text-lg font-bold text-gray-300">
+                  {product.color}
+                </p>
+              </div>
               <div className="flex gap-4">
-                <p className="text-lg font-bold">តម្លៃ៖</p>
+                <p className="text-gray-400 text-lg">តម្លៃ៖</p>
                 <p
-                  className="text-lg font-bold text-rose-500"
+                  className="text-lg font-bold text-rose-600 bg-rose-500/20 border-b-4 border-rose-400/20 px-2 rounded-sm"
                   style={{ fontFamily: "Inter" }}
                 >
                   ${product.price}

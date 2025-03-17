@@ -78,7 +78,7 @@ export default function Navbar() {
             ផលិតផល
           </Link>
           <Link
-            href="/contact"
+            href="#"
             className={`text-lg font-medium uppercase hover:underline ${
               isActive("/contact") ? "text-white underline" : "text-gray-400"
             }`}
@@ -117,7 +117,7 @@ export default function Navbar() {
             ផលិតផល
           </Link>
           <Link
-            href="/contact"
+            href="#"
             className={`text-lg font-medium uppercase hover:underline ${
               isActive("/contact") ? "text-white underline" : "text-gray-400"
             }`}

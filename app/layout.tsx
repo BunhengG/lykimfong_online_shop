@@ -20,7 +20,7 @@ const battambang = Battambang({
 });
 
 export const metadata: Metadata = {
-  title: "Siren Shop",
+  title: "Ly Kimfong Shop",
   description: "Phone Accessories Shop",
 };
 
@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body
-        className={`${battambang.className} antialiased bg-gray-100`}
+        className={`${battambang.className} antialiased bg-black`}
       >
         <div className="flex flex-col min-h-screen">
           <Navbar />

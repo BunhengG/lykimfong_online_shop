@@ -1,8 +1,8 @@
 export default function Footer() {
     return (
-      <footer className="bg-rose-500  py-6 mt-12">
+      <footer className="bg-gray-950 py-6">
         <div className="container mx-auto text-center">
-          <p className="text-white" style={{fontFamily: 'Inter'}}>&copy; {new Date().getFullYear()} Siren Shop. All rights reserved.</p>
+          <p className="text-white" style={{fontFamily: 'Inter'}}>&copy; {new Date().getFullYear()} Ly Kimfong. All rights reserved.</p>
         </div>
       </footer>
     );
