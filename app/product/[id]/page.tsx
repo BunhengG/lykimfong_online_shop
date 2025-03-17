@@ -1,10 +1,11 @@
 "use client";
 
+import React, { useState, useEffect, useRef } from "react";
 import { useParams, useRouter } from "next/navigation";
-import { useState, useEffect, useRef } from "react";
 import { Product } from "@/models/product_model";
 import productData from "@/data/product_data.json";
 import Image from "next/image";
+import ImageMagnify from "react-image-magnify";
 
 export default function ProductDetail() {
   const params = useParams();
@@ -13,7 +14,6 @@ export default function ProductDetail() {
     (p) => p.id.toString() === params.id
   );
 
-  // Initialize selectedImage state unconditionally
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
@@ -32,23 +32,15 @@ export default function ProductDetail() {
     setIsImageLoaded(true);
   };
 
-  // Scroll
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
 
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
       const scrollAmount = 250;
-      if (direction === "right") {
-        scrollContainerRef.current.scrollBy({
-          left: scrollAmount,
-          behavior: "smooth",
-        });
-      } else {
-        scrollContainerRef.current.scrollBy({
-          left: -scrollAmount,
-          behavior: "smooth",
-        });
-      }
+      scrollContainerRef.current.scrollBy({
+        left: direction === "right" ? scrollAmount : -scrollAmount,
+        behavior: "smooth",
+      });
     }
   };
 
@@ -65,19 +57,13 @@ export default function ProductDetail() {
   return (
     <div className="bg-black container mx-auto lg:p-6 py-2 mt-16">
       <div className="flex justify-between items-center w-full my-8 text-white px-4">
-        <div>
-          <h2 className="text-2xl font-bold ">
-            | ព័ត៌មានផលិតផល
-          </h2>
-        </div>
-        <div className="text-center lg:hidden block">
-          <button
-            onClick={handleBack}
-            className="p-2 bg-rose-500/20 text-rose-500 rounded-md hover:text-white transition duration-300"
-          >
-            ត្រឡប់ក្រោយ
-          </button>
-        </div>
+        <h2 className="text-2xl font-bold ">| ព័ត៌មានផលិតផល</h2>
+        <button
+          onClick={handleBack}
+          className="p-2 bg-rose-500/20 text-rose-500 rounded-md hover:text-white transition duration-300 lg:hidden block"
+        >
+          ត្រឡប់ក្រោយ
+        </button>
       </div>
 
       <div className="mx-auto lg:p-8 p-4">
@@ -85,36 +71,57 @@ export default function ProductDetail() {
           {/* Left Side */}
           <div className="flex flex-col items-center justify-center space-y-6">
             {selectedImage && (
-              <div className="relative w-full h-2/3 overflow-hidden flex justify-center">
-                <Image
-                  key={selectedImage}
-                  width={480}
-                  height={400}
-                  src={selectedImage}
-                  alt={product.title}
-                  className={`border border-white p-0.5 rounded-2xl object-contain transition-opacity duration-700 ease-in-out ${
+              <div className="relative w-full h-2/3 flex justify-center">
+                <div
+                  className={`transition-opacity duration-500 ${
                     isImageLoaded ? "opacity-100" : "opacity-0"
                   }`}
-                  onLoadingComplete={handleImageLoad}
-                  placeholder="blur"
-                  blurDataURL={selectedImage}
-                />
+                >
+                  <ImageMagnify
+                    {...{
+                      smallImage: {
+                        alt: product.title,
+                        isFluidWidth: true,
+                        src: selectedImage,
+                        onLoad: handleImageLoad,
+                      },
+                      largeImage: {
+                        src: selectedImage,
+                        width: 2000,
+                        height: 700,
+                        alt: product.title,
+                        onLoad: handleImageLoad,
+                      },
+                      enlargedImageContainerStyle: {
+                        background: "#000",
+                        zIndex: 99,
+                        borderRadius: "16px",
+                        overflow: "hidden",
+                        backgroundBlendMode: "screen",
+                        transform: "scale(1)",
+                        transition: "transform 0.3s ease-in-out",
+                        animation: "true",
+                        animationDuration: "2s",
+                        animationTimingFunction: "ease-in-out",
+                        border: "0px solid"
+                      },
+                      enlargedImagePosition: "beside",
+                    }}
+                  />
+                </div>
               </div>
             )}
 
             {/* Horizontal Scroll */}
             <div className="relative lg:mt-2 w-full">
-              {/* Left Scroll Button - Hidden on Mobile */}
-              <div className="absolute left-0 top-1/2 transform -translate-y-1/2 cursor-pointer z-10 hidden sm:block">
-                <button
-                  onClick={() => scroll("left")}
-                  className=" bg-white/20 pb-1 text-white w-10 h-10 rounded-full hover:bg-rose-500/25 transition-all duration-300 transform hover:scale-110"
-                >
-                  &#8592;
-                </button>
-              </div>
+              <button
+                onClick={() => scroll("left")}
+                className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/20 text-white w-10 h-10 rounded-full hover:bg-rose-500/25 transition-all duration-300 transform hover:scale-110 hidden sm:block"
+              >
+                &#8592;
+              </button>
 
-              {/* Scrollable */}
+              {/* Scrollable Thumbnails */}
               <div
                 ref={scrollContainerRef}
                 className="flex space-x-4 overflow-x-auto py-2 px-1 scrollbar-hide snap-x snap-mandatory scroll-smooth mx-auto w-full sm:max-w-[90%] md:max-w-[80%] max-w-full"
@@ -137,14 +144,12 @@ export default function ProductDetail() {
               </div>
 
               {/* Right Scroll Button - Hidden on Mobile */}
-              <div className="absolute right-0 top-1/2 transform -translate-y-1/2 cursor-pointer z-10 hidden sm:block">
-                <button
-                  onClick={() => scroll("right")}
-                  className="bg-white/20 pb-1 text-white w-10 h-10 rounded-full hover:bg-rose-500/25 transition-all duration-300 transform hover:scale-110"
-                >
-                  &#8594;
-                </button>
-              </div>
+              <button
+                onClick={() => scroll("right")}
+                className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/20 text-white w-10 h-10 rounded-full hover:bg-rose-500/25 transition-all duration-300 transform hover:scale-110 hidden sm:block"
+              >
+                &#8594;
+              </button>
             </div>
           </div>
 
