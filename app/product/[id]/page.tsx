@@ -107,6 +107,7 @@ export default function ProductDetail() {
                   zoomSrc={selectedImage}
                   zoomType="hover"
                   zoomScale={1.5}
+                  fullscreenOnMobile={true}
                   className="border border-white p-0.5 rounded-2xl object-contain bg-gray-950 "
                 />
               </div>
