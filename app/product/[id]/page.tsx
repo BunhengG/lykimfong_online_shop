@@ -101,11 +101,13 @@ export default function ProductDetail() {
                   blurDataURL={selectedImage}
                 /> */}
                 <InnerImageZoom
+                  width={480}
+                  height={400}
                   src={selectedImage}
                   zoomSrc={selectedImage}
                   zoomType="hover"
-                  zoomScale={2}
-                  className="border border-white p-0.5 rounded-2xl"
+                  zoomScale={1.5}
+                  className="border border-white p-0.5 rounded-2xl object-contain bg-gray-950 "
                 />
               </div>
             )}
