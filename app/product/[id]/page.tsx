@@ -6,6 +6,8 @@ import { useState, useEffect, useRef } from "react";
 import { Product } from "@/models/product_model";
 import productData from "@/data/product_data.json";
 import Image from "next/image";
+import InnerImageZoom from "react-inner-image-zoom";
+import "react-inner-image-zoom/lib/InnerImageZoom/styles.css";
 
 export default function ProductDetail() {
   const params = useParams();
@@ -16,7 +18,7 @@ export default function ProductDetail() {
 
   // Initialize selectedImage state unconditionally
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const [isImageLoaded, setIsImageLoaded] = useState(false);
+  // const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   useEffect(() => {
     if (product) {
@@ -25,13 +27,13 @@ export default function ProductDetail() {
   }, [product]);
 
   const handleImageClick = (image: string) => {
-    setIsImageLoaded(false);
+    // setIsImageLoaded(false);
     setSelectedImage(image);
   };
 
-  const handleImageLoad = () => {
-    setIsImageLoaded(true);
-  };
+  // const handleImageLoad = () => {
+  //   setIsImageLoaded(true);
+  // };
 
   // Scroll
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
@@ -85,7 +87,7 @@ export default function ProductDetail() {
           <div className="flex flex-col items-center justify-center space-y-6">
             {selectedImage && (
               <div className="relative w-full h-2/3 overflow-hidden flex items-center justify-center">
-                <Image
+                {/* <Image
                   key={selectedImage}
                   width={480}
                   height={400}
@@ -97,6 +99,13 @@ export default function ProductDetail() {
                   onLoadingComplete={handleImageLoad}
                   placeholder="blur"
                   blurDataURL={selectedImage}
+                /> */}
+                <InnerImageZoom
+                  src={selectedImage}
+                  zoomSrc={selectedImage}
+                  zoomType="hover"
+                  zoomScale={2}
+                  className="border border-white p-0.5 rounded-2xl"
                 />
               </div>
             )}
