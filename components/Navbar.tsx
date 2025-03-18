@@ -95,7 +95,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden flex flex-col space-y-4 bg-gradient-to-b from-black/80 to-black/30 text-center py-8">
+        <div className="md:hidden flex flex-col space-y-4 bg-gray-950 text-center py-8">
           <Link
             href="/"
             className={`text-lg font-medium uppercase hover:underline ${
