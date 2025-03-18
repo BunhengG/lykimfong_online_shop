@@ -31,7 +31,7 @@ const HomePage = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className="relative bg-cover bg-center h-screen"
-        style={{ backgroundImage: `url("./cover.webp")` }}
+        style={{ backgroundImage: `url("./cover.jpg")` }}
       >
         <div className="absolute inset-0 bg-black opacity-60"></div>
         <div className="container mx-auto h-full flex justify-center items-center text-center text-white relative z-10">
@@ -57,7 +57,7 @@ const HomePage = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="py-16 bg-black"
+        className="py-16 bg-gray-950"
       >
         <div className="container mx-auto text-center">
           <h2 className="lg:text-3xl text-2xl lg:font-semibold font-semibold text-white lg:mb-8">
@@ -106,7 +106,7 @@ const HomePage = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="py-8 bg-gray-950"
+        className="py-8 bg-gray-900"
       >
         <div className="container mx-auto text-center">
           <h2 className="lg:text-3xl text-2xl font-semibold text-white mb-4">
@@ -140,7 +140,7 @@ const HomePage = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="py-12 bg-gray-950 text-center"
+        className="py-12 bg-gray-900 text-center"
       >
         <h2 className="text-xl text-gray-300 font-semibold mb-6">
           ទំនាក់ទំនងផ្សេងៗ

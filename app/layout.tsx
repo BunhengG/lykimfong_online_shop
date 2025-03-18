@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body
-        className={`${battambang.className} antialiased bg-gray-900`}
+        className={`${battambang.className} antialiased bg-gray-950`}
       >
         <div className="flex flex-col min-h-screen">
           <Navbar />

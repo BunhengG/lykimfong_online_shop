@@ -66,7 +66,7 @@ export default function ProductDetail() {
   }
 
   return (
-    <div className="bg-black container mx-auto lg:p-6 py-2 mt-16">
+    <div className="bg-gray-950 container mx-auto lg:p-6 py-2 mt-16">
       <div className="flex justify-between items-center w-full my-8 text-white px-4">
         <div>
           <h2 className="text-2xl font-bold ">| ព័ត៌មានផលិតផល</h2>
