@@ -90,7 +90,7 @@ const ProductPage = () => {
               <div className="flex gap-4">
                 <p className="text-gray-400 text-lg">តម្លៃ៖</p>
                 <p
-                  className="text-lg font-bold text-rose-600 bg-rose-500/20 border-b-4 border-rose-400/20 px-2 rounded-sm"
+                  className="text-lg font-bold text-blue-600 bg-blue-500/20 border-b-4 border-blue-400/20 px-2 rounded-sm"
                   style={{ fontFamily: "Inter" }}
                 >
                   ${product.price}

@@ -24,7 +24,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className="bg-black">
+    <div className="bg-gray-900">
       {/* Hero Section */}
       <motion.section
         initial={{ opacity: 0, y: 0 }}
@@ -44,7 +44,7 @@ const HomePage = () => {
             </p>
             <Link
               href="/productList"
-              className=" bg-rose-500/20 text-white hover:text-white border border-rose-600 hover:bg-rose-500 py-2 px-8 rounded-4xl"
+              className=" bg-blue-500/20 text-white hover:text-white border border-blue-600 hover:bg-blue-500 py-2 px-8 rounded-4xl"
             >
               ចូលមើលទំនិញ
             </Link>
@@ -90,7 +90,7 @@ const HomePage = () => {
                   <p className="text-gray-400 mb-8">{product.details[0]}</p>
                   <Link
                     href="/productList"
-                    className="bg-rose-500/20 text-rose-500 hover:text-white border border-rose-600 hover:bg-rose-500 py-2 px-4 rounded-4xl"
+                    className="bg-blue-500/20 text-blue-500 hover:text-white border border-blue-600 hover:bg-blue-500 py-2 px-4 rounded-4xl"
                   >
                     ចូលមើលបន្ថែម
                   </Link>
