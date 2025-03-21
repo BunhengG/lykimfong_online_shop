@@ -212,5 +212,20 @@
     "price": 7.99,
     "details": ["គុណភាព៖ រឹងមាំធុន"],
     "category": "Lens"
+  },
+  {
+    "id": 14,
+    "title": "Lens Guard For iPhone",
+    "image": "/14/main.webp",
+    "images": [
+      "/14/main.webp", 
+      "/14/gl_1.webp",
+      "/14/gl_2.webp"
+    ],
+    "color": "ខៀវ",
+    "date": "2025-03-21",
+    "price": 14.99,
+    "details": ["គុណភាព៖ រឹងមាំធុន"],
+    "category": "Lens"
   }
 ]
