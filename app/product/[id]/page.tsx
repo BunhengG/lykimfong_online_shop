@@ -156,11 +156,9 @@ export default function ProductDetail() {
         </div>
 
         {/* Related Products */}
-        <div className="mt-20">
-          <h3 className="text-2xl font-semibold text-white mb-4">
-            | ផលិតផលទាក់ទង
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="mt-12">
+          <h3 className="text-2xl font-semibold text-white mb-4">| ផលិតផលទាក់ទង</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {relatedProducts.map((related, index) => (
               <motion.div
                 key={related.id}
@@ -168,45 +166,16 @@ export default function ProductDetail() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.2, delay: index * 0.1 }}
                 whileHover={{ scale: 1.02 }}
-                className="bg-gray-900 rounded-3xl shadow-lg hover:shadow-xl transition duration-300 relative border border-gray-500"
+                className="bg-gray-900 lg:h-3/4 rounded-3xl transition duration-300 border border-gray-500 overflow-hidden"
               >
-                <Image
-                  src={related.image}
-                  alt={related.title}
-                  width={350}
-                  height={330}
-                  className="w-full h-2/3 object-cover rounded-t-3xl"
-                />
-                <div className="px-4">
-                  <h4
-                    className="text-lg font-semibold text-gray-300 mt-6 mb-2"
-                    style={{ fontFamily: "Inter" }}
-                  >
-                    {related.title}
-                  </h4>
-                  <div className="flex gap-2 mb-2">
-                    <p className="text-gray-400 text-base">ពណ៌៖ </p>
-                    <p className="text-base font-bold text-gray-300 truncate w-full">
-                      {related.color}
-                    </p>
-                  </div>
-                  <div className="flex gap-4 mb-2">
-                    <p className="text-gray-400 text-lg">តម្លៃ៖</p>
-                    <p
-                      className="text-base font-bold text-blue-600 bg-blue-500/20 border-b-4 border-blue-400/20 px-2 rounded-sm"
-                      style={{ fontFamily: "Inter" }}
-                    >
-                      ${product.price}
-                    </p>
-                  </div>
-                  <div className="flex justify-center mt-4">
-                    <button
-                      onClick={() => router.push(`/product/${related.id}`)}
-                      className="w-full bg-blue-500/20 text-blue-500 hover:text-white border border-blue-600 hover:bg-blue-500 py-4 px-4 rounded-4xl cursor-pointer"
-                    >
-                      ចូលមើល
-                    </button>
-                  </div>
+                <Image src={related.image} alt={related.title} width={350} height={250} className="w-full h-2/3 object-cover rounded-t-3xl" />
+                <div className="p-4">
+                  <h4 className="text-lg font-semibold text-gray-300 mb-2">{related.title}</h4>
+                  <p className="text-gray-400 text-sm">ពណ៌: {related.color}</p>
+                  <p className="text-blue-500 font-bold mt-1">$ {related.price}</p>
+                  <button onClick={() => router.push(`/product/${related.id}`)} className="mt-3 w-full bg-blue-500/20 text-blue-500 hover:text-white border border-blue-600 hover:bg-blue-500 lg:py-4 lg:px-4 py-2 rounded-4xl cursor-pointer transition-all">
+                    ចូលមើល
+                  </button>
                 </div>
               </motion.div>
             ))}
