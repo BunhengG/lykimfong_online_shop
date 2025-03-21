@@ -16,7 +16,7 @@
       "កូដខ្សែរសាក៖ TP២៤០",
       "មាននិម្មិតសញ្ញា៖ ក្រុមហ៊ុន វ៉ាខន"
     ],
-    "category": "charger"
+    "category": "chargerSet"
   },
   {
     "id": 2,
@@ -246,5 +246,25 @@
       "រុនសាក៖ USB-C"
     ],
     "category": "airpods"
+  },
+  {
+    "id": 15,
+    "title": "Samsung 25W Adapter",
+    "image": "/16/main.png",
+    "images": [
+      "/16/main.png", 
+      "/16/gl_1.png",
+      "/16/gl_2.png",
+      "/16/gl_3.png"
+    ],
+    "color": "ខ្មៅ",
+    "date": "2025-03-21",
+    "price": 17.99,
+    "details": [
+      "ការធានា៖ មួយខែ", 
+      "កម្លាំង៖ 25W", 
+      "គុណភាព៖ ធានាសុទ្ធ"
+    ],
+    "category": "adapter"
   }
 ]
