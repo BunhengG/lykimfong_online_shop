@@ -13,6 +13,13 @@ const ProductPage = () => {
   const products: Product[] = productData;
   const router = useRouter();
   const [favorites, setFavorites] = useState<string[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+
+  // Extract unique categories from products
+  const categories = [
+    "all",
+    ...new Set(products.map((product) => product.category)),
+  ];
 
   // Load favorites from localStorage on the client side
   useEffect(() => {
@@ -38,11 +45,47 @@ const ProductPage = () => {
     localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
   };
 
+  // Filter products by selected category
+  const filteredProducts =
+    selectedCategory === "all"
+      ? products
+      : products.filter((product) => product.category === selectedCategory);
+
+  // func translate categories
+  const translateCategory = (category: string) => {
+    const translations: { [key: string]: string } = {
+      adapter: "ខ្សែរសាក",
+      charger: "ដុំសាក",
+      chargerSet: "ឈុតដុំសាក",
+      earphone: "កាសត្រចៀក",
+      case: "សំបកទូរស័ព្ទ",
+      all: "ទាំងអស់",
+    };
+
+    return translations[category] || category;
+  };
+
   return (
     <div className="container mx-auto p-6 mt-16">
-      <h2 className="text-2xl font-semibold text-white my-6">| បញ្ជីទាំងអស់</h2>
+      {/* Title and Dropdown Filter Category */}
+      <div className="flex justify-between items-center">
+        <h2 className="text-2xl font-semibold text-white my-6">
+          | បញ្ជីទាំងអស់
+        </h2>
+        <select
+          className="text-white bg-gray-800 border border-gray-600 rounded-md px-4 py-1"
+          value={selectedCategory}
+          onChange={(e) => setSelectedCategory(e.target.value)}
+        >
+          {categories.map((category) => (
+            <option key={category} value={category}>
+              {translateCategory(category)}
+            </option>
+          ))}
+        </select>
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-        {products.map((product, index) => (
+        {filteredProducts.map((product, index) => (
           <motion.div
             key={product.id}
             initial={{ opacity: 0, y: 50 }}

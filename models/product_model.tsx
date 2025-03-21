@@ -7,5 +7,6 @@ export interface Product {
     date: string;
     price: number;
     details: string[];
+    category: string;
   }
   
