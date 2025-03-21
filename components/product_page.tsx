@@ -83,7 +83,7 @@ const ProductPage = () => {
   };
 
   return (
-    <div className="container mx-auto p-16 mt-16">
+    <div className="container mx-auto lg:p-16 p-8 mt-16">
       {/* Title and Dropdown Filter Category */}
       <div className="flex justify-between items-center">
         <h2 className="text-2xl font-semibold text-white my-6">
