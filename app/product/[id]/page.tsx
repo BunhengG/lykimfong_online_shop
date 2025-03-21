@@ -152,6 +152,14 @@ export default function ProductDetail() {
                 តម្លៃ៖ ${product.price}
               </p>
             </div>
+            <ul className="space-y-4 text-lg text-gray-400">
+              {product.details.map((detail, index) => (
+                <li key={index} className="flex items-start">
+                  <span className="text-rose-800 mr-4">•</span>
+                  <span>{detail}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
@@ -184,7 +192,9 @@ export default function ProductDetail() {
                   >
                     {related.title}
                   </h3>
-                  <p className="text-gray-400 text-base">ពណ៌: {related.color}</p>
+                  <p className="text-gray-400 text-base">
+                    ពណ៌: {related.color}
+                  </p>
                   <div className="flex gap-4">
                     <p className="text-gray-400 text-lg">តម្លៃ៖</p>
                     <p className="text-base font-bold text-blue-600 bg-blue-500/20 border-b-4 border-blue-400/20 px-2 rounded-sm">
