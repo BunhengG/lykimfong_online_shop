@@ -73,6 +73,8 @@ const ProductPage = () => {
       earphone: "កាសត្រចៀក",
       airpods: "Airpods",
       case: "សំបកទូរស័ព្ទ",
+      screenProtector: "កញ្ចក់ការពារអេក្រង់",
+      stand: "ជើងទម្រ",
       all: "ទាំងអស់",
     };
 
@@ -131,26 +133,26 @@ const ProductPage = () => {
               height={230}
               src={product.image}
               alt={product.title}
-              className="w-full h-72 object-cover rounded-t-3xl bg-black"
+              className="w-full h-80 object-cover rounded-t-3xl bg-gray-700"
               onClick={() => router.push(`/product/${product.id}`)}
             />
             <div className="p-4">
               <h3
-                className=" lg:text-xl text-lg text-gray-500 font-semibold lg:my-4 my-4"
+                className=" lg:text-xl text-lg text-gray-400 font-semibold lg:my-4 my-4"
                 style={{ fontFamily: "Inter" }}
               >
                 {product.title}
               </h3>
-              <div className="flex gap-2">
-                <p className="text-gray-400 text-lg">ពណ៌៖ </p>
-                <p className="text-lg font-bold text-gray-300 truncate w-full">
+              <div className="flex gap-2 mb-2">
+                <p className="text-gray-400 text-base">ពណ៌៖ </p>
+                <p className="text-base font-bold text-gray-300 truncate w-full">
                   {product.color}
                 </p>
               </div>
               <div className="flex gap-4">
                 <p className="text-gray-400 text-lg">តម្លៃ៖</p>
                 <p
-                  className="text-lg font-bold text-blue-600 bg-blue-500/20 border-b-4 border-blue-400/20 px-2 rounded-sm"
+                  className="text-base font-bold text-blue-600 bg-blue-500/20 border-b-4 border-blue-400/20 px-2 rounded-sm"
                   style={{ fontFamily: "Inter" }}
                 >
                   ${product.price}

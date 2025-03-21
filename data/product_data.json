@@ -20,22 +20,19 @@
   },
   {
     "id": 2,
-    "title": "Headphone Jack Adapter (USB-C)",
-    "image": "/2/usb_c_to_headphone_jack_adapter_a_2155_gl1.JPG",
+    "title": "USB-C to Headphone Jack Adapter",
+    "image": "/2/main.png",
     "images": [
-      "/2/usb_c_to_headphone_jack_adapter_a_2155_gl1.jpg",
-      "/2/usb_c_to_headphone_jack_adapter_a_2155_gl2.jpg",
-      "/2/usb_c_to_headphone_jack_adapter_a_2155_gl3.JPG",
-      "/2/usb_c_to_headphone_jack_adapter_a_2155.jpg"
+      "/2/main.png",
+      "/2/gl_1.jpg",
+      "/2/gl_2.JPG",
+      "/2/gl_3.jpg",
+      "/2/gl_4.jpg"
     ],
     "color": "ស",
     "date": "2025-03-15",
-    "price": 15.99,
-    "details": [
-      "ខ្សែរតំណ៖ ភ្ជាប់ជាមួយកាស់ហ្សីន",
-      "ការធានា៖ ៦ ខែ",
-      "កូដ៖ A២១៥៥"
-    ],
+    "price": 14.99,
+    "details": ["ខ្សែរតំណ៖ USB-C", "ការធានា៖ 6 ខែ", "ប្រវែង៖ 3.5 mm"],
     "category": "adapter"
   },
   {
@@ -51,21 +48,23 @@
     "date": "2025-02-16",
     "price": 7.99,
     "details": ["ការធានាមួយសប្តាហ៍"],
-    "category": "charger"
+    "category": "chargerSet"
   },
   {
     "id": 4,
-    "title": "DuyEar (❌Not USB-C)",
-    "image": "/6/duyear_ip7.JPG",
+    "title": "Lightning to Headphone Jack Adapter",
+    "image": "/6/main.png",
     "images": [
-      "/6/duyear_ip7.JPG",
-      "/6/duyear_ip7_gl1.JPG",
-      "/6/duyear_ip7_gl2.JPG"
+      "/6/main.png",
+      "/6/gl_1.JPG",
+      "/6/gl_2.JPG",
+      "/6/gl_3.JPG",
+      "/6/gl_4.JPG"
     ],
     "color": "ស",
     "date": "2025-02-15",
     "price": 15.99,
-    "details": ["ខ្សែរតំណ៖ ភ្ជាប់ជាមួយកាស់ហ្សីន", "ការធានា៖ ៦ ខែ", "កូដ៖ IP៧"],
+    "details": ["ខ្សែរតំណ៖ Normal-USB", "ការធានា៖ 6 ខែ", "ប្រវែង៖ 3.5 mm"],
     "category": "adapter"
   },
   {
@@ -137,12 +136,61 @@
     ],
     "color": "ស",
     "date": "2025-03-21",
-    "price": 30.99,
-    "details": [
-      "ការធានាមួយសប្តាហ៍",
-      "Free: ស្រោមកាស់មួយ",
-      "រុនសាក៖ USB-C"
-    ],
+    "price": 24.99,
+    "details": ["ការធានាមួយសប្តាហ៍", "Free: ស្រោមកាស់មួយ", "រុនសាក៖ USB-C"],
     "category": "airpods"
+  },
+  {
+    "id": 9,
+    "title": "OG Glass ESD",
+    "image": "/9/main.jpg",
+    "images": ["/9/main.jpg", "/9/gl_1.jpg", "/9/gl_2.jpg", "/9/gl_3.jpg"],
+    "color": "ថ្លា",
+    "date": "2025-03-21",
+    "price": 0.0,
+    "details": [
+      "មាននិម្មិតសញ្ញា៖ ក្រុមហ៊ុន អូជី",
+      "កម្រាស់៖ រឹងមាំ និង Smooth Scroll"
+    ],
+    "category": "screenProtector"
+  },
+  {
+    "id": 10,
+    "title": "AirPods (3rd Generation)",
+    "image": "/10/main.png",
+    "images": ["/10/main.png", "/10/gl_1.jpg", "/10/gl_2.jpg"],
+    "color": "ស",
+    "date": "2025-03-21",
+    "price": 24.99,
+    "details": ["ការធានាមួយសប្តាហ៍", "បន្ថែម: ស្រោមកាស់មួយ", "រុនសាក៖ USB-C"],
+    "category": "airpods"
+  },
+  {
+    "id": 11,
+    "title": "AirPods 4",
+    "image": "/11/main.png",
+    "images": ["/11/main.png"],
+    "color": "ស",
+    "date": "2025-03-21",
+    "price": 34.99,
+    "details": ["ការធានាមួយសប្តាហ៍", "បន្ថែម: ស្រោមកាស់មួយ", "រុនសាក៖ USB-C"],
+    "category": "airpods"
+  },
+  {
+    "id": 12,
+    "title": "Jmary MK59 360 Degree Rotating",
+    "image": "/12/main.png",
+    "images": [
+      "/12/main.png",
+      "/12/gl_1.png",
+      "/12/gl_2.png",
+      "/12/gl_3.png",
+      "/12/gl_4.png"
+    ],
+    "color": "ខ្មៅ",
+    "date": "2025-03-21",
+    "price": 34.99,
+    "details": ["បង្វិលបាន៖ 360 ដឺក្រេ", "ទម្ងន់៖ ស្រាល ងាយដាក់តាមខ្លួន", "គុណភាព៖ រឹងមាំធុន"],
+    "category": "stand"
   }
 ]
