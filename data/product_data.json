@@ -122,5 +122,27 @@
       "បន្ថែម Memory"
     ],
     "category": "airpods"
+  },
+  {
+    "id": 8,
+    "title": "AirPods Pro (2nd Generation) USB-C",
+    "image": "/8/main.png",
+    "images": [
+      "/8/main.png",
+      "/8/gl_1.png",
+      "/8/gl_2.png",
+      "/8/gl_3.png",
+      "/8/gl_4.png",
+      "/8/gl_5.png"
+    ],
+    "color": "ស",
+    "date": "2025-03-21",
+    "price": 30.99,
+    "details": [
+      "ការធានាមួយសប្តាហ៍",
+      "Free: ស្រោមកាស់មួយ",
+      "រុនសាក៖ USB-C"
+    ],
+    "category": "airpods"
   }
 ]
