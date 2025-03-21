@@ -10,10 +10,14 @@ import { FaHeart } from "react-icons/fa";
 import { FiHeart } from "react-icons/fi";
 
 const ProductPage = () => {
-  const products: Product[] = productData;
+  const products: Product[] = productData.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
   const router = useRouter();
   const [favorites, setFavorites] = useState<string[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const productsPerPage = 8;
 
   // Extract unique categories from products
   const categories = [
@@ -51,6 +55,15 @@ const ProductPage = () => {
       ? products
       : products.filter((product) => product.category === selectedCategory);
 
+  // Pagination Logic
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = filteredProducts.slice(
+    indexOfFirstProduct,
+    indexOfLastProduct
+  );
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+
   // func translate categories
   const translateCategory = (category: string) => {
     const translations: { [key: string]: string } = {
@@ -58,6 +71,7 @@ const ProductPage = () => {
       charger: "ដុំសាក",
       chargerSet: "ឈុតដុំសាក",
       earphone: "កាសត្រចៀក",
+      airpods: "Airpods",
       case: "សំបកទូរស័ព្ទ",
       all: "ទាំងអស់",
     };
@@ -75,7 +89,10 @@ const ProductPage = () => {
         <select
           className="text-white bg-gray-800 border border-gray-600 rounded-md px-4 py-1"
           value={selectedCategory}
-          onChange={(e) => setSelectedCategory(e.target.value)}
+          onChange={(e) => {
+            setSelectedCategory(e.target.value);
+            setCurrentPage(1);
+          }}
         >
           {categories.map((category) => (
             <option key={category} value={category}>
@@ -85,7 +102,7 @@ const ProductPage = () => {
         </select>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-        {filteredProducts.map((product, index) => (
+        {currentProducts.map((product, index) => (
           <motion.div
             key={product.id}
             initial={{ opacity: 0, y: 50 }}
@@ -118,10 +135,7 @@ const ProductPage = () => {
               onClick={() => router.push(`/product/${product.id}`)}
             />
             <div className="p-4">
-              <h3
-                className="lg:text-xl text-lg text-gray-500 font-semibold lg:my-4 my-4"
-                style={{ fontFamily: "Inter" }}
-              >
+              <h3 className="lg:text-xl text-lg text-gray-500 font-semibold lg:my-4 my-4" style={{ fontFamily: "Inter" }}>
                 {product.title}
               </h3>
               <div className="flex gap-2">
@@ -132,15 +146,28 @@ const ProductPage = () => {
               </div>
               <div className="flex gap-4">
                 <p className="text-gray-400 text-lg">តម្លៃ៖</p>
-                <p
-                  className="text-lg font-bold text-blue-600 bg-blue-500/20 border-b-4 border-blue-400/20 px-2 rounded-sm"
-                  style={{ fontFamily: "Inter" }}
-                >
+                <p className="text-lg font-bold text-blue-600 bg-blue-500/20 border-b-4 border-blue-400/20 px-2 rounded-sm" style={{ fontFamily: "Inter" }}>
                   ${product.price}
                 </p>
               </div>
             </div>
           </motion.div>
+        ))}
+      </div>
+      {/* Pagination Controls */}
+      <div className="flex justify-center mt-6 space-x-2" style={{ fontFamily: "Inter" }}>
+        {Array.from({ length: totalPages }, (_, i) => (
+          <button
+            key={i + 1}
+            className={`px-4 py-2 rounded-md ${
+              currentPage === i + 1
+                ? "bg-blue-600 text-white"
+                : "bg-gray-700 text-white cursor-pointer"
+            }`}
+            onClick={() => setCurrentPage(i + 1)}
+          >
+            {i + 1}
+          </button>
         ))}
       </div>
     </div>

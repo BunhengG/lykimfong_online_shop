@@ -196,7 +196,7 @@ export default function ProductDetail() {
         <div className="mt-6 text-center hidden sm:block">
           <button
             onClick={handleBack}
-            className="px-4 py-2 bg-rose-500/20 text-rose-500 hover:text-white rounded-lg transition duration-300"
+            className="px-4 py-2 bg-rose-500/20 text-rose-500 hover:text-white rounded-lg transition duration-300 cursor-pointer"
           >
             ត្រឡប់ក្រោយ
           </button>
