@@ -192,5 +192,20 @@
     "price": 34.99,
     "details": ["បង្វិលបាន៖ 360 ដឺក្រេ", "ទម្ងន់៖ ស្រាល ងាយដាក់តាមខ្លួន", "គុណភាព៖ រឹងមាំធុន"],
     "category": "stand"
+  },
+  {
+    "id": 13,
+    "title": "Lens Guard For iPhone",
+    "image": "/13/main.jpg",
+    "images": [
+      "/13/main.jpg",
+      "/13/gl_1.jpg",
+      "/13/gl_2.jpg"
+    ],
+    "color": "ខៀវ",
+    "date": "2025-03-21",
+    "price": 7.99,
+    "details": ["គុណភាព៖ រឹងមាំធុន"],
+    "category": "Lens"
   }
 ]

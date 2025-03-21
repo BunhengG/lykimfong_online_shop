@@ -75,6 +75,7 @@ const ProductPage = () => {
       case: "សំបកទូរស័ព្ទ",
       screenProtector: "កញ្ចក់ការពារអេក្រង់",
       stand: "ជើងទម្រ",
+      Lens: "Lens",
       all: "ទាំងអស់",
     };
 
