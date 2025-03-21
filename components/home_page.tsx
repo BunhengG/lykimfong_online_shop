@@ -71,16 +71,16 @@ const HomePage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.2, delay: index * 0.1 }}
                 whileHover={{ scale: 1.02 }}
-                className="bg-gray-900 rounded-3xl shadow-lg hover:shadow-xl transition duration-300 relative border border-gray-500"
+                className="bg-gray-900 rounded-3xl transition duration-300 relative border border-gray-500"
               >
                 <Image
                   width={350}
                   height={330}
                   src={product.image}
                   alt={product.title}
-                  className="w-full h-72 object-cover rounded-t-3xl"
+                  className="w-full h-96 object-cover rounded-t-3xl"
                 />
-                <div className="p-12">
+                <div className="p-4 py-8">
                   <h3
                     className="text-white text-xl font-semibold mb-2 truncate w-full"
                     style={{ fontFamily: "Inter" }}
@@ -88,12 +88,14 @@ const HomePage = () => {
                     {product.title}
                   </h3>
                   <p className="text-gray-400 mb-8">{product.details[0]}</p>
-                  <Link
-                    href="/productList"
-                    className="bg-blue-500/20 text-blue-500 hover:text-white border border-blue-600 hover:bg-blue-500 py-2 px-4 rounded-4xl"
+                  <button
+                    onClick={() => {
+                      window.location.href = "/productList";
+                    }}
+                    className="w-full bg-blue-500/20 text-blue-500 hover:text-white border border-blue-600 hover:bg-blue-500 py-3 px-4 rounded-4xl"
                   >
                     ចូលមើលបន្ថែម
-                  </Link>
+                  </button>
                 </div>
               </motion.div>
             ))}
