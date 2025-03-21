@@ -131,7 +131,7 @@ const ProductPage = () => {
               height={230}
               src={product.image}
               alt={product.title}
-              className="w-full h-72 object-cover rounded-t-3xl"
+              className="w-full h-72 object-cover rounded-t-3xl bg-black px-2"
               onClick={() => router.push(`/product/${product.id}`)}
             />
             <div className="p-4">
