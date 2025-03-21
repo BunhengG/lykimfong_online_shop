@@ -102,54 +102,25 @@
   },
   {
     "id": 7,
-    "title": "Airpods Max Pink",
+    "title": "AirPods Max 2 USB-C",
     "image": "/7/airpods-max-pink.webp",
     "images": [
-      "/7/airpods-max-pink.webp"
-    ],
-    "color": "ផ្កាឈូក",
-    "date": "2025-03-21",
-    "price": 0.00,
-    "details": ["សំលេកបុកល្អ", "សាកថ្ម៖ ២ - ៣ ម៉ោង", "កាន់ថ្ម៖ ១២ ម៉ោង", "មានវិទ្យុ", "បន្ថែម Memory"],
-    "category": "airpods"
-  },
-  {
-    "id": 8,
-    "title": "Airpods Max Silver",
-    "image": "/7/airpods-max-silver.webp",
-    "images": [
-      "/7/airpods-max-silver.webp"
-    ],
-    "color": "ប្រាក់",
-    "date": "2025-03-21",
-    "price": 0.00,
-    "details": ["សំលេកបុកល្អ", "សាកថ្ម៖ ២ - ៣ ម៉ោង", "កាន់ថ្ម៖ ១២ ម៉ោង", "មានវិទ្យុ", "បន្ថែម Memory"],
-    "category": "airpods"
-  },
-  {
-    "id": 9,
-    "title": "Airpods Max Skyblue",
-    "image": "/7/airpods-max-skyblue.webp",
-    "images": [
-      "/7/airpods-max-skyblue.webp"
-    ],
-    "color": "ផ្ទៃមេឃ",
-    "date": "2025-03-21",
-    "price": 0.00,
-    "details": ["សំលេកបុកល្អ", "សាកថ្ម៖ ២ - ៣ ម៉ោង", "កាន់ថ្ម៖ ១២ ម៉ោង", "មានវិទ្យុ", "បន្ថែម Memory"],
-    "category": "airpods"
-  },
-  {
-    "id": 10,
-    "title": "Airpods Max Space Gray",
-    "image": "/7/airpods-max-spacegray.webp",
-    "images": [
+      "/7/airpods-max-pink.webp",
+      "/7/airpods-max-silver.webp",
+      "/7/airpods-max-skyblue.webp",
+      "/7/airpods-max-green.webp",
       "/7/airpods-max-spacegray.webp"
     ],
-    "color": "ប្រផេះក្រមៅ",
+    "color": "ផ្កាឈូក, ប្រាក់, ផ្ទៃមេឃ, បៃតង, ប្រផេះក្រមៅ",
     "date": "2025-03-21",
-    "price": 0.00,
-    "details": ["សំលេកបុកល្អ", "សាកថ្ម៖ ២ - ៣ ម៉ោង", "កាន់ថ្ម៖ ១២ ម៉ោង", "មានវិទ្យុ", "បន្ថែម Memory"],
+    "price": 0.0,
+    "details": [
+      "សំលេកបុកល្អ",
+      "សាកថ្ម៖ ២ - ៣ ម៉ោង",
+      "កាន់ថ្ម៖ ១២ ម៉ោង",
+      "មានវិទ្យុ",
+      "បន្ថែម Memory"
+    ],
     "category": "airpods"
   }
 ]
