@@ -248,7 +248,7 @@
     "category": "airpods"
   },
   {
-    "id": 15,
+    "id": 16,
     "title": "Samsung 25W Adapter",
     "image": "/16/main.png",
     "images": [
@@ -266,5 +266,23 @@
       "គុណភាព៖ ធានាសុទ្ធ"
     ],
     "category": "adapter"
+  },
+  {
+    "id": 17,
+    "title": "Power Pulse 20000mAh Power Bank",
+    "image": "/17/main.webp",
+    "images": [
+      "/17/main.webp", 
+      "/17/gl_1.JPG"
+    ],
+    "color": "ខ្មៅ",
+    "date": "2025-03-21",
+    "price": 0.0,
+    "details": [
+      "ការធានា៖ មួយខែ", 
+      "កម្លាំងផ្ទុក៖ 20000mAh", 
+      "មាននិម្មិតសញ្ញា៖ Mimus"
+    ],
+    "category": "powerbank"
   }
 ]
