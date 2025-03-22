@@ -72,7 +72,7 @@ const ProductPage = () => {
       chargerSet: "ឈុតដុំសាក",
       earphone: "កាសត្រចៀក",
       airpods: "Airpods",
-      case: "សំបកទូរស័ព្ទ",
+      case: "ស្រោមទូរស័ព្ទ",
       screenProtector: "កញ្ចក់ការពារអេក្រង់",
       stand: "ជើងទម្រ",
       Lens: "Lens",
