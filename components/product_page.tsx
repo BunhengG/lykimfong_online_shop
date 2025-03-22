@@ -86,7 +86,7 @@ const ProductPage = () => {
   return (
     <div className="container mx-auto lg:p-16 p-4 mt-16">
       {/* Search and Dropdown Filter Category */}
-      <div className="flex justify-between items-center gap-6 py-4">
+      <div className="flex justify-between items-center gap-6 py-4 lg:mb-12 mb-4">
         <SearchButton />
         <select
           className="text-white bg-gray-800 border border-gray-600 rounded-md px-4 py-2 w-1/3"
