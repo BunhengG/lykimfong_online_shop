@@ -88,7 +88,7 @@ export default function ProductDetail() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           <div className="flex flex-col items-center justify-center space-y-6">
             {selectedImage && (
-              <div className="rounded-2xl relative w-full lg:h-[480px] overflow-hidden flex items-center justify-center">
+              <div className="relative w-full lg:h-[480px] overflow-hidden flex items-center justify-center">
                 {/* <InnerImageZoom
                   width={800}
                   height={400}
@@ -104,9 +104,10 @@ export default function ProductDetail() {
                   <Image
                     src={selectedImage}
                     alt={product.title}
-                    width={800}
+                    width={780}
                     height={400}
-                    className="p-4 object-contain bg-gray-900 transition-transform duration-300 hover:scale-105"
+
+                    className="p-4 object-cover rounded-2xl bg-gray-950 transition-transform duration-300 hover:scale-105"
                   />
                 </Zoom>
               </div>
