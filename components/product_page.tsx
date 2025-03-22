@@ -83,7 +83,7 @@ const ProductPage = () => {
   };
 
   return (
-    <div className="container mx-auto lg:p-16 p-8 mt-16">
+    <div className="container mx-auto lg:p-16 p-4 mt-16">
       {/* Title and Dropdown Filter Category */}
       <div className="flex justify-between items-center">
         <h2 className="text-2xl font-semibold text-white my-6">
@@ -104,7 +104,7 @@ const ProductPage = () => {
           ))}
         </select>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:gap-4 gap-2">
         {currentProducts.map((product, index) => (
           <motion.div
             key={product.id}
@@ -112,7 +112,7 @@ const ProductPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: index * 0.05 }}
             whileHover={{ scale: 1.02 }}
-            className="bg-gray-900 rounded-3xl shadow-lg hover:shadow-xl transition duration-300 relative border border-gray-500 cursor-pointer"
+            className="bg-gray-900 lg:rounded-3xl rounded-xl transition duration-300 relative border border-gray-500 cursor-pointer"
           >
             {/* Favorite Button */}
             <button
@@ -120,7 +120,7 @@ const ProductPage = () => {
                 e.stopPropagation();
                 handleFavoriteClick(product.id.toString());
               }}
-              className="p-3 absolute top-0 right-0 text-2xl bg-gray-800 hover:bg-gray-800/50 rounded-tr-3xl rounded-bl-4xl"
+              className="lg:p-3 p-1 absolute top-0 right-0 text-2xl bg-gray-800 hover:bg-gray-800/50 lg:rounded-tr-3xl rounded-tr-xl lg:rounded-bl-4xl rounded-bl-2xl"
             >
               {favorites.includes(product.id.toString()) ? (
                 <FaHeart className="text-rose-600 cursor-pointer" />
@@ -134,26 +134,26 @@ const ProductPage = () => {
               height={230}
               src={product.image}
               alt={product.title}
-              className="w-full h-80 object-cover rounded-t-3xl bg-gray-700"
+              className="w-full lg:h-80 h-40 object-cover lg:rounded-t-3xl rounded-t-xl bg-gray-700"
               onClick={() => router.push(`/product/${product.id}`)}
             />
-            <div className="p-4">
+            <div className="lg:p-4 p-2">
               <h3
-                className=" lg:text-xl text-lg text-gray-400 font-semibold lg:my-4 my-4"
+                className=" lg:text-xl text-sm text-gray-400 font-semibold lg:my-4 my-4"
                 style={{ fontFamily: "Inter" }}
               >
                 {product.title}
               </h3>
               <div className="flex gap-2 mb-2">
-                <p className="text-gray-400 text-base">ពណ៌៖ </p>
-                <p className="text-base font-bold text-gray-300 truncate w-full">
+                <p className="text-gray-400 lg:text-base text-sm">ពណ៌៖ </p>
+                <p className="lg:text-base text-sm font-bold text-gray-300 truncate w-full">
                   {product.color}
                 </p>
               </div>
               <div className="flex gap-4">
-                <p className="text-gray-400 text-lg">តម្លៃ៖</p>
+                <p className="text-gray-400 lg:text-base text-sm">តម្លៃ៖</p>
                 <p
-                  className="text-base font-bold text-blue-600 bg-blue-500/20 border-b-4 border-blue-400/20 px-2 rounded-sm"
+                  className="lg:text-base text-sm lg:font-bold text-blue-600 bg-blue-500/20 border-b-4 border-blue-400/20 px-2 rounded-sm"
                   style={{ fontFamily: "Inter" }}
                 >
                   ${product.price}
