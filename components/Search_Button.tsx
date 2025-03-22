@@ -22,7 +22,7 @@ const SearchButton = () => {
 
   return (
     <button
-      className="cursor-text text-white bg-gray-800 border border-gray-600 rounded-md px-4 py-2 lg:w-1/3 w-[50px] max-w-xl flex items-center justify-start"
+      className=" cursor-text text-white bg-gray-800 border border-gray-600 rounded-md px-4 py-3 lg:w-1/4 w-[56px] max-w-xl flex items-center justify-start"
       style={{ fontFamily: "Inter" }}
       onClick={() => router.push("/search")}
     >

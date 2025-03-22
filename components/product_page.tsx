@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import { FaHeart } from "react-icons/fa";
 import { FiHeart } from "react-icons/fi";
 import SearchButton from "./Search_Button";
+import { translateCategory } from "@/utils/translateCategory";
 
 const ProductPage = () => {
   const products: Product[] = productData.sort(
@@ -65,31 +66,14 @@ const ProductPage = () => {
   );
   const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
 
-  // func translate categories
-  const translateCategory = (category: string) => {
-    const translations: { [key: string]: string } = {
-      adapter: "ខ្សែរសាក",
-      charger: "ដុំសាក",
-      chargerSet: "ឈុតដុំសាក",
-      earphone: "កាសត្រចៀក",
-      airpods: "Airpods",
-      case: "ស្រោមទូរស័ព្ទ",
-      screenProtector: "កញ្ចក់ការពារអេក្រង់",
-      stand: "ជើងទម្រ",
-      Lens: "Lens",
-      all: "មើលទាំងអស់",
-    };
-
-    return translations[category] || category;
-  };
-
   return (
     <div className="container mx-auto lg:p-16 p-4 mt-16">
       {/* Search and Dropdown Filter Category */}
       <div className="flex justify-between items-center gap-6 py-4 lg:mb-12 mb-4">
         <SearchButton />
         <select
-          className="text-white bg-gray-800 border border-gray-600 rounded-md px-4 py-2 w-1/3"
+          className="text-white bg-gray-800 border border-gray-600 rounded-md px-4 py-2 
+             w-1/3 sm:w-1/2 md:w-1/3 lg:w-1/4 text-lg sm:text-base md:text-lg"
           value={selectedCategory}
           onChange={(e) => {
             setSelectedCategory(e.target.value);

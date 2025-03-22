@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { FiArrowLeft } from "react-icons/fi";
 import { FaTimesCircle } from "react-icons/fa";
+import { translateCategory } from "@/utils/translateCategory";
 
 const SearchPage = () => {
   const [searchQuery, setSearchQuery] = useState<string>("");
@@ -17,11 +18,21 @@ const SearchPage = () => {
   // Function to handle the search
   useEffect(() => {
     if (searchQuery) {
-      const results = productData.filter(
-        (product) =>
-          product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          product.price.toString().includes(searchQuery)
-      );
+      const lowerSearchQuery = searchQuery.toLowerCase();
+
+      const results = productData.filter((product) => {
+        const translatedCategory = translateCategory(
+          product.category
+        ).toLowerCase();
+
+        return (
+          product.title.toLowerCase().includes(lowerSearchQuery) ||
+          product.price.toString().includes(lowerSearchQuery) ||
+          product.category.toLowerCase().includes(lowerSearchQuery) ||
+          translatedCategory.includes(lowerSearchQuery)
+        );
+      });
+
       setFilteredProducts(results);
     } else {
       setFilteredProducts([]);
@@ -40,14 +51,14 @@ const SearchPage = () => {
       <div className="flex items-center justify-center mb-8 space-x-2">
         <button
           onClick={handleBack}
-          className="text-white bg-gray-800 rounded-md px-4 py-2.5 cursor-pointer"
+          className="text-white bg-gray-800 border border-gray-800 rounded-md px-4 py-4 cursor-pointer"
         >
           <FiArrowLeft className="text-xl" />
         </button>
         <div className="flex items-center w-full max-w-xl bg-gray-800 rounded-md">
           <input
             type="text"
-            className="text-white bg-gray-800 border-none px-4 py-2 w-full rounded-md focus:outline-none"
+            className="text-white bg-gray-800 border-none px-4 py-4 w-full rounded-md focus:outline-none"
             style={{ fontFamily: "Inter" }}
             placeholder="Search..."
             autoFocus
@@ -75,14 +86,14 @@ const SearchPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.05 }}
               className="bg-gray-900 rounded-xl transition duration-300 relative border border-gray-500 cursor-pointer"
-              onClick={() => router.push(`/product/${product.id}`)} 
+              onClick={() => router.push(`/product/${product.id}`)}
             >
               <Image
                 width={250}
                 height={230}
                 src={product.image}
                 alt={product.title}
-                className="w-full h-40 object-cover rounded-t-xl"
+                className="w-full lg:h-[300px] h-52 object-cover rounded-t-xl"
               />
               <div className="p-4">
                 <h3 className="text-sm text-gray-400 truncate">
@@ -111,7 +122,7 @@ const SearchPage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
                 className="bg-gray-900 rounded-xl transition duration-300 relative border border-gray-500"
-                onClick={() => router.push(`/product/${product.id}`)} 
+                onClick={() => router.push(`/product/${product.id}`)}
               >
                 <Image
                   width={250}
