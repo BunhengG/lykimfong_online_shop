@@ -87,7 +87,7 @@ const ProductPage = () => {
         </select>
         <SearchButton />
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-10">
         {currentProducts.map((product, index) => (
           <motion.div
             key={product.id}
@@ -120,23 +120,18 @@ const ProductPage = () => {
               className="w-full lg:h-80 h-40 object-cover lg:rounded-t-3xl rounded-t-xl bg-gray-700"
               onClick={() => router.push(`/product/${product.id}`)}
             />
-            <div className="lg:p-4 p-2">
+            <div className="lg:px-6 lg:py-4 p-2">
               <h3
-                className=" lg:text-xl text-sm text-gray-400 lg:font-semibold font-medium my-4"
+                className=" lg:text-lg text-sm text-gray-300 font-medium my-4"
                 style={{ fontFamily: "Inter" }}
               >
                 {product.title}
               </h3>
               <div className="flex gap-2 mb-2">
-                <p className="text-gray-400 lg:text-base text-sm">ពណ៌៖ </p>
-                <p className="lg:text-base text-sm font-bold text-gray-300 truncate w-full">
-                  {product.color}
-                </p>
               </div>
               <div className="flex gap-4">
-                <p className="text-gray-400 lg:text-base text-sm">តម្លៃ៖</p>
                 <p
-                  className="lg:text-base text-sm lg:font-bold text-blue-600 bg-blue-500/20 border-b-4 border-blue-400/20 px-2 rounded-sm"
+                  className="lg:text-base text-sm lg:font-bold text-blue-600 bg-blue-500/20 border-l-4 border-blue-400/20 px-4 py-2 rounded-sm"
                   style={{ fontFamily: "Inter" }}
                 >
                   ${product.price}
