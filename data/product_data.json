@@ -114,6 +114,7 @@
     "date": "2025-03-21",
     "price": 0.0,
     "details": [
+      "ការធានា៖ មួយខែ",
       "សំលេងបុកល្អ",
       "សាកថ្ម៖ ២ - ៣ ម៉ោង",
       "កាន់ថ្ម៖ ១២ ម៉ោង",
@@ -198,7 +199,7 @@
     "details": [
       "បង្វិលបាន៖ 360 ដឺក្រេ",
       "ទម្ងន់៖ ស្រាល ងាយដាក់តាមខ្លួន",
-      "គុណភាព៖ រឹងមាំធុន"
+      "គុណភាព៖ រឹងមាំធន់"
     ],
     "category": "stand"
   },
@@ -210,7 +211,7 @@
     "color": "ផ្ទៃមេឃ",
     "date": "2025-03-21",
     "price": 4.99,
-    "details": ["គុណភាព៖ រឹងមាំធុន"],
+    "details": ["គុណភាព៖ រឹងមាំធន់"],
     "category": "Lens"
   },
   {
@@ -269,7 +270,7 @@
   },
   {
     "id": 17,
-    "title": "CaseLuxury Plating Heat Dissipation Phone Case For iPhone 15 14 13 12 11 Pro Max Plus",
+    "title": "CaseLuxury Plating Heat Dissipation Phone Case",
     "image": "/17/main.webp",
     "images": [
       "/17/main.webp", 
@@ -283,13 +284,13 @@
       "/17/gl_8.webp"
     ],
     "color": "ខ្មៅ, បៃតង, ខៀវ, ស្វាយ, ផ្កាឈូក, ប្រាក់, មាស, ទឹកសមុទ្រ",
-    "date": "2025-03-21",
-    "price": 24.99,
+    "date": "2025-03-22",
+    "price": 6.99,
     "details": [
-      "ការធានា៖ មួយខែ", 
-      "កម្លាំងផ្ទុក៖ 20000mAh", 
-      "មាននិម្មិតសញ្ញា៖ Mimus"
+      "ប្រើបានចាប់ពី៖ iPhone 15 14 13 12 11 Pro Max Plus",
+      "គុណភាព៖ រឹងមាំ ធន់", 
+      "ការពារ៖ Len Camera"
     ],
-    "category": "powerbank"
+    "category": "case"
   }
 ]
