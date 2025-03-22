@@ -145,12 +145,7 @@
     "id": 9,
     "title": "OG Glass ESD | Screen Protection",
     "image": "/9/main.JPG",
-    "images": [
-      "/9/main.JPG", 
-      "/9/gl_1.JPG", 
-      "/9/gl_2.JPG", 
-      "/9/gl_3.JPG"
-    ],
+    "images": ["/9/main.JPG", "/9/gl_1.JPG", "/9/gl_2.JPG", "/9/gl_3.JPG"],
     "color": "ថ្លា",
     "date": "2025-03-21",
     "price": 0.0,
@@ -207,11 +202,7 @@
     "id": 13,
     "title": "Lens Guard For iPhone",
     "image": "/13/main.jpg",
-    "images": [
-      "/13/main.jpg", 
-      "/13/gl_1.jpg", 
-      "/13/gl_2.jpg"
-    ],
+    "images": ["/13/main.jpg", "/13/gl_1.jpg", "/13/gl_2.jpg"],
     "color": "ផ្ទៃមេឃ",
     "date": "2025-03-21",
     "price": 4.99,
@@ -222,79 +213,117 @@
     "id": 14,
     "title": "Apple iPhone 12 Pro Max Fast Charger And Data Cable USB-C to Lightning",
     "image": "/14/main.webp",
-    "images": [
-      "/14/main.webp", 
-      "/14/gl_1.webp",
-      "/14/gl_2.webp"
-    ],
+    "images": ["/14/main.webp", "/14/gl_1.webp", "/14/gl_2.webp"],
     "color": "ស",
     "date": "2025-03-21",
     "price": 14.99,
-    "details": ["សម្រាប់៖ IP 12 Pro Max", "ការធានាមួយអាទិត្យ", "រុនសាក៖ USB-C", "ល្បឿន៖ 20W លឿន"],
+    "details": [
+      "សម្រាប់៖ IP 12 Pro Max",
+      "ការធានាមួយអាទិត្យ",
+      "រុនសាក៖ USB-C",
+      "ល្បឿន៖ 20W លឿន"
+    ],
     "category": "chargerSet"
   },
   {
     "id": 15,
     "title": "AirPods 2",
     "image": "/15/main.png",
-    "images": [
-      "/15/main.png", 
-      "/15/gl_1.png",
-      "/15/gl_2.png"
-    ],
+    "images": ["/15/main.png", "/15/gl_1.png", "/15/gl_2.png"],
     "color": "ស",
     "date": "2025-03-21",
     "price": 14.99,
-    "details": [
-      "ការធានា៖ មួយសប្តាហ៍", 
-      "បន្ថែម៖ ស្រោមកាស់មួយ", 
-      "រុនសាក៖ USB-C"
-    ],
+    "details": ["ការធានា៖ មួយសប្តាហ៍", "បន្ថែម៖ ស្រោមកាស់មួយ", "រុនសាក៖ USB-C"],
     "category": "airpods"
   },
   {
     "id": 16,
     "title": "Samsung 25W Adapter",
     "image": "/16/main.png",
-    "images": [
-      "/16/main.png", 
-      "/16/gl_1.png",
-      "/16/gl_2.png",
-      "/16/gl_3.png"
-    ],
+    "images": ["/16/main.png", "/16/gl_1.png", "/16/gl_2.png", "/16/gl_3.png"],
     "color": "ខ្មៅ",
     "date": "2025-03-21",
     "price": 17.99,
-    "details": [
-      "ការធានា៖ មួយខែ", 
-      "កម្លាំង៖ 25W", 
-      "គុណភាព៖ ធានាសុទ្ធ"
-    ],
+    "details": ["ការធានា៖ មួយខែ", "កម្លាំង៖ 25W", "គុណភាព៖ ធានាសុទ្ធ"],
     "category": "adapter"
   },
   {
     "id": 17,
     "title": "CaseLuxury Plating Heat Dissipation Phone Case",
-    "image": "/17/main.webp",
-    "images": [
-      "/17/main.webp", 
-      "/17/gl_1.webp",
-      "/17/gl_2.webp",
-      "/17/gl_3.webp",
-      "/17/gl_4.webp",
-      "/17/gl_5.webp",
-      "/17/gl_6.webp",
-      "/17/gl_7.webp",
-      "/17/gl_8.webp"
-    ],
+    "image": "/17/main.jpg",
+    "images": ["/17/main.jpg"],
     "color": "ខ្មៅ, បៃតង, ខៀវ, ស្វាយ, ផ្កាឈូក, ប្រាក់, មាស, ទឹកសមុទ្រ",
     "date": "2025-03-22",
     "price": 6.99,
     "details": [
       "ប្រើបានចាប់ពី៖ iPhone 15 14 13 12 11 Pro Max Plus",
-      "គុណភាព៖ រឹងមាំ ធន់", 
+      "គុណភាព៖ រឹងមាំ ធន់",
       "ការពារ៖ Len Camera"
     ],
     "category": "case"
+  },
+  {
+    "id": 18,
+    "title": "Phone Case | Wireless Charger",
+    "image": "/18/main.jpg",
+    "images": ["/18/main.jpg"],
+    "color": "ខ្មៅ, បៃតង, ស្វាយ, ទឹកក្រូច, ទឹកសមុទ្រ",
+    "date": "2025-03-22",
+    "price": 6.99,
+    "details": [
+      "ប្រើបានចាប់ពី៖ iPhone 15 14 13 12 11 Pro Max Plus",
+      "គុណភាព៖ រឹងមាំ ធន់",
+      "ខាងក្រោយ៖ សាច់លេខ 1 និង Wireless Charger"
+    ],
+    "category": "case"
+  },
+  {
+    "id": 19,
+    "title": "Phone Case | CAM 07 Transparent Type",
+    "image": "/19/main.jpg",
+    "images": ["/19/main.jpg"],
+    "color": "ខ្មៅ, បៃតង, ស្វាយ, ទឹកក្រូច, ទឹកសមុទ្រ",
+    "date": "2025-03-22",
+    "price": 5.99,
+    "details": [
+      "ប្រើបានចាប់ពី៖ iPhone 16 15 14 13 12 11 Pro Max Plus",
+      "គុណភាព៖ រឹងមាំ ធន់",
+      "ខាងក្រោយ៖ Wireless Charger"
+    ],
+    "category": "case"
+  },
+  {
+    "id": 20,
+    "title": "Phone Cooler for Gaming",
+    "image": "/20/main.jpg",
+    "images": ["/20/main.jpg", "/20/gl_1.jpg", "/20/gl_2.jpg"],
+    "color": "ខ្មៅ",
+    "date": "2025-03-22",
+    "price": 15.99,
+    "details": [
+      "ការពារ៖ ការឡើងកម្ដៅទូរស័ព្ទ",
+      "ប្រើបាន៖ គ្រប់ប្រភេទទូរស័ព្ទ",
+      "គុណភាព៖ រឹងមាំ ធន់",
+      "រុនសាក៖ USB-C",
+      "ជាប្រភេតកង្ហាទឹកកក ដែរមានបន្ទះទឹកកក ត្រជាក់ជំនួយដល់ម៉ាសុិនទូសព្ទ័ អោយត្រជាក់។"
+    ],
+    "category": "others"
+  },
+  {
+    "id": 21,
+    "title": "Jmary KT-239 Multifunction Tripod Stand with Bluetooth Remote",
+    "image": "/21/main.jpg",
+    "images": ["/21/main.jpg", "/21/gl_1.jpg", "/21/gl_2.jpg", "/21/gl_3.jpg"],
+    "color": "ខ្មៅ",
+    "date": "2025-03-22",
+    "price": 19.99,
+    "details": [
+      "ប្រវែង៖ 175Cm",
+      "ទំហំ៖ 323x78x44mm",
+      "គុណភាព៖ រឹងមាំ ធន់",
+      "Remote Battery៖ CR1632",
+      "ជាប្រភេតដងសំរាប់សែលហ្វើកីបានដាក់បញ្ឍឡាយក៏បាន។"
+    ],
+    "category": "others"
   }
 ]

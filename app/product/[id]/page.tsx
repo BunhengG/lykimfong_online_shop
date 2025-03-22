@@ -10,6 +10,7 @@ import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import { FiArrowLeft } from "react-icons/fi";
 import { motion } from "framer-motion";
+import SearchButton from "@/components/Search_Button";
 
 export default function ProductDetail() {
   const params = useParams();
@@ -64,22 +65,18 @@ export default function ProductDetail() {
     .slice(0, 3);
 
   return (
-    <div className="bg-gray-950 container mx-auto lg:p-6 py-2 mt-16">
-      <div className="flex justify-between items-center w-full my-8 text-white px-4">
-        <div>
-          <h2 className="text-2xl font-bold">| ព័ត៌មានផលិតផល</h2>
-        </div>
-        <div className="text-center">
-          <button
-            onClick={handleBack}
-            className="p-2 bg-blue-500/20 text-blue-500 rounded-md hover:text-white transition duration-300 cursor-pointer"
-          >
-            <div className="flex items-center gap-2">
-              <FiArrowLeft />
-              ត្រឡប់ក្រោយ
-            </div>
-          </button>
-        </div>
+    <div className="container mx-auto lg:p-16 p-4 mt-16">
+      <div className="flex justify-between items-center gap-6 py-4 mb-4">
+        <button
+          onClick={handleBack}
+          className="p-2 bg-blue-500/20 text-blue-500 rounded-md hover:text-white transition duration-300 cursor-pointer"
+        >
+          <div className="flex items-center gap-2">
+            <FiArrowLeft />
+            ត្រឡប់ក្រោយ
+          </div>
+        </button>
+        <SearchButton />
       </div>
 
       <div className="mx-auto lg:p-8 p-4">
@@ -104,7 +101,6 @@ export default function ProductDetail() {
                     alt={product.title}
                     width={780}
                     height={400}
-
                     className="p-4 object-cover rounded-2xl bg-gray-950 transition-transform duration-300 hover:scale-105"
                   />
                 </Zoom>
@@ -171,6 +167,12 @@ export default function ProductDetail() {
                 </li>
               ))}
             </ul>
+            <div
+              className="py-2 px-4 bg-blue-600/20 text-blue-500 text-base w-52 text-center flex gap-2 uppercase rounded-lg"
+              style={{ fontFamily: "Inter" }}
+            >
+              Category: <p className="text-white/50">{product.category}</p>
+            </div>
           </div>
         </div>
 

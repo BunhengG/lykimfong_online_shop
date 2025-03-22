@@ -9,6 +9,7 @@ export const translateCategory = (category: string): string => {
       screenProtector: "កញ្ចក់ការពារអេក្រង់",
       stand: "ជើងទម្រ",
       lens: "Lens",
+      others: "ផ្សេងៗទៀត",
       all: "មើលទាំងអស់",
     };
   
