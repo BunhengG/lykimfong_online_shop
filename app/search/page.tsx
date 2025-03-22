@@ -40,7 +40,7 @@ const SearchPage = () => {
       <div className="flex items-center justify-center mb-8 space-x-2">
         <button
           onClick={handleBack}
-          className="text-white bg-gray-800 rounded-md px-4 py-2.5"
+          className="text-white bg-gray-800 rounded-md px-4 py-2.5 cursor-pointer"
         >
           <FiArrowLeft className="text-xl" />
         </button>
@@ -74,7 +74,8 @@ const SearchPage = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.05 }}
-              className="bg-gray-900 rounded-xl transition duration-300 relative border border-gray-500"
+              className="bg-gray-900 rounded-xl transition duration-300 relative border border-gray-500 cursor-pointer"
+              onClick={() => router.push(`/product/${product.id}`)} 
             >
               <Image
                 width={250}
