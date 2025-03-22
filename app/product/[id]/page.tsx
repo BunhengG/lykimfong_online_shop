@@ -6,7 +6,9 @@ import { useState, useEffect, useRef } from "react";
 import { Product } from "@/models/product_model";
 import productData from "@/data/product_data.json";
 import Image from "next/image";
-import InnerImageZoom from "react-inner-image-zoom";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
+// import InnerImageZoom from "react-inner-image-zoom";
 import "react-inner-image-zoom/lib/InnerImageZoom/styles.css";
 import { FiArrowLeft } from "react-icons/fi";
 import { motion } from "framer-motion";
@@ -86,18 +88,27 @@ export default function ProductDetail() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           <div className="flex flex-col items-center justify-center space-y-6">
             {selectedImage && (
-              <div className="relative w-full h-2/3 overflow-hidden flex items-center justify-center">
-                <InnerImageZoom
-                  width={480}
+              <div className="rounded-2xl relative w-full lg:h-[480px] overflow-hidden flex items-center justify-center">
+                {/* <InnerImageZoom
+                  width={800}
                   height={400}
                   src={selectedImage}
                   zoomSrc={selectedImage}
-                  zoomType="hover"
-                  zoomScale={2}
+                  zoomType="click"
+                  zoomScale={3}
                   zoomPreload={true}
                   fullscreenOnMobile={true}
-                  className="inner-image-zoom__zoomed border border-white p-0.5 rounded-2xl object-contain bg-gray-950"
-                />
+                  className="px-2 object-contain bg-gray-900 transform origin-center object-center"
+                /> */}
+                <Zoom>
+                  <Image
+                    src={selectedImage}
+                    alt={product.title}
+                    width={800}
+                    height={400}
+                    className="p-4 object-contain bg-gray-900 transition-transform duration-300 hover:scale-105"
+                  />
+                </Zoom>
               </div>
             )}
             <div className="relative lg:mt-2 w-full">
