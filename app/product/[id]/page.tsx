@@ -8,8 +8,6 @@ import productData from "@/data/product_data.json";
 import Image from "next/image";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
-// import InnerImageZoom from "react-inner-image-zoom";
-import "react-inner-image-zoom/lib/InnerImageZoom/styles.css";
 import { FiArrowLeft } from "react-icons/fi";
 import { motion } from "framer-motion";
 
