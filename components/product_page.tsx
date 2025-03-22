@@ -138,7 +138,7 @@ const ProductPage = () => {
             />
             <div className="lg:p-4 p-2">
               <h3
-                className=" lg:text-xl text-sm text-gray-400 font-semibold lg:my-4 my-4"
+                className=" lg:text-xl text-sm text-gray-400 lg:font-semibold font-medium my-4"
                 style={{ fontFamily: "Inter" }}
               >
                 {product.title}
