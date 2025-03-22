@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { FaHeart } from "react-icons/fa";
 import { FiHeart } from "react-icons/fi";
+import SearchButton from "./Search_Button";
 
 const ProductPage = () => {
   const products: Product[] = productData.sort(
@@ -76,7 +77,7 @@ const ProductPage = () => {
       screenProtector: "កញ្ចក់ការពារអេក្រង់",
       stand: "ជើងទម្រ",
       Lens: "Lens",
-      all: "ទាំងអស់",
+      all: "មើលទាំងអស់",
     };
 
     return translations[category] || category;
@@ -84,13 +85,11 @@ const ProductPage = () => {
 
   return (
     <div className="container mx-auto lg:p-16 p-4 mt-16">
-      {/* Title and Dropdown Filter Category */}
-      <div className="flex justify-between items-center">
-        <h2 className="text-2xl font-semibold text-white my-6">
-          | បញ្ជីទាំងអស់
-        </h2>
+      {/* Search and Dropdown Filter Category */}
+      <div className="flex justify-between items-center gap-6 py-4">
+        <SearchButton />
         <select
-          className="text-white bg-gray-800 border border-gray-600 rounded-md px-4 py-1"
+          className="text-white bg-gray-800 border border-gray-600 rounded-md px-4 py-2 w-1/3"
           value={selectedCategory}
           onChange={(e) => {
             setSelectedCategory(e.target.value);
@@ -104,7 +103,7 @@ const ProductPage = () => {
           ))}
         </select>
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:gap-4 gap-2">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:gap-4 gap-2 mb-10">
         {currentProducts.map((product, index) => (
           <motion.div
             key={product.id}
@@ -165,9 +164,36 @@ const ProductPage = () => {
       </div>
       {/* Pagination Controls */}
       <div
-        className="flex justify-center mt-6 space-x-2"
+        className="flex justify-center mt-20 space-x-2"
         style={{ fontFamily: "Inter" }}
       >
+        {/* First Page Button (<<) */}
+        <button
+          className={`px-4 py-2 rounded-md ${
+            currentPage === 1
+              ? "bg-gray-600 text-gray-400 cursor-not-allowed"
+              : "bg-gray-700 text-white cursor-pointer"
+          }`}
+          onClick={() => currentPage > 1 && setCurrentPage(1)}
+          disabled={currentPage === 1}
+        >
+          &lt;&lt;
+        </button>
+
+        {/* Previous Button (<) */}
+        <button
+          className={`px-4 py-2 rounded-md ${
+            currentPage === 1
+              ? "bg-gray-600 text-gray-400 cursor-not-allowed"
+              : "bg-gray-700 text-white cursor-pointer"
+          }`}
+          onClick={() => currentPage > 1 && setCurrentPage(currentPage - 1)}
+          disabled={currentPage === 1}
+        >
+          &lt;
+        </button>
+
+        {/* Page Numbers */}
         {Array.from({ length: totalPages }, (_, i) => (
           <button
             key={i + 1}
@@ -181,6 +207,34 @@ const ProductPage = () => {
             {i + 1}
           </button>
         ))}
+
+        {/* Next Button (>) */}
+        <button
+          className={`px-4 py-2 rounded-md ${
+            currentPage === totalPages
+              ? "bg-gray-600 text-gray-400 cursor-not-allowed"
+              : "bg-gray-700 text-white cursor-pointer"
+          }`}
+          onClick={() =>
+            currentPage < totalPages && setCurrentPage(currentPage + 1)
+          }
+          disabled={currentPage === totalPages}
+        >
+          &gt;
+        </button>
+
+        {/* Last Page Button (>>) */}
+        <button
+          className={`px-4 py-2 rounded-md ${
+            currentPage === totalPages
+              ? "bg-gray-600 text-gray-400 cursor-not-allowed"
+              : "bg-gray-700 text-white cursor-pointer"
+          }`}
+          onClick={() => currentPage < totalPages && setCurrentPage(totalPages)}
+          disabled={currentPage === totalPages}
+        >
+          &gt;&gt;
+        </button>
       </div>
     </div>
   );
