@@ -111,6 +111,7 @@ const SearchPage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
                 className="bg-gray-900 rounded-xl transition duration-300 relative border border-gray-500"
+                onClick={() => router.push(`/product/${product.id}`)} 
               >
                 <Image
                   width={250}
